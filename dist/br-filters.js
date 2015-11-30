@@ -4,7 +4,7 @@
 (function() {
     'use strict';
 
-    angular.module('angular-br-filters', []);
+    angular.module('br-filters', []);
 })();
 
 /**
@@ -14,7 +14,7 @@
     'use strict';
 
     angular
-        .module('angular-br-filters')
+        .module('br-filters')
         .filter('cep', cep);
 
     /** @ngInject */
@@ -44,7 +44,7 @@
     'use strict';
 
     angular
-        .module('angular-br-filters')
+        .module('br-filters')
         .filter('cnpj', cnpj);
 
     /** @ngInject */
@@ -77,7 +77,7 @@
     'use strict';
 
     angular
-        .module('angular-br-filters')
+        .module('br-filters')
         .filter('cpfCnpj', cpfCnpj);
 
     cpfCnpj.$inject = ['$filter'];
@@ -113,7 +113,7 @@
     'use strict';
 
     angular
-        .module('angular-br-filters')
+        .module('br-filters')
         .filter('cpf', cpf);
 
     /** @ngInject */
@@ -145,7 +145,7 @@
     'use strict';
 
     angular
-        .module('angular-br-filters')
+        .module('br-filters')
         .filter('telefone', telefone);
 
     /** @ngInject */
