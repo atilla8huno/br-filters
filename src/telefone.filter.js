@@ -5,7 +5,7 @@
     'use strict';
 
     angular
-        .module('angular-br-filters')
+        .module('br-filters')
         .filter('telefone', telefone);
 
     /** @ngInject */

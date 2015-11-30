@@ -4,5 +4,5 @@
 (function() {
     'use strict';
 
-    angular.module('angular-br-filters', []);
+    angular.module('br-filters', []);
 })();
