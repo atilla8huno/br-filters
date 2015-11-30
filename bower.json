@@ -3,9 +3,9 @@
   "version": "v1.0.1",
   "homepage": "https://github.com/atilla8huno/angular-br-filters",
   "authors": [
-    "ATILLA BARROS <atilla8huno@gmail.com>"
+    "Átilla Barros <atilla8huno@gmail.com>"
   ],
-  "description": "Angular's Brazillian Filters, like CPF, CNPJ, CEP, Telefone, etc.",
+  "description": "Angular's Brazilian Filters, like CPF, CNPJ, CEP, Telefone, etc.",
   "main": [
     "dist/br-filters.min.js"
   ],
