@@ -17,7 +17,7 @@ bower install br-filters
 reference the script
 
 ```html
-<script src="bower_components/angular-br-filters/dist/br-filters.min.js"></script>
+<script src="bower_components/br-filters/dist/br-filters.min.js"></script>
 ```
 
 ---
