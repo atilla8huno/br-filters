@@ -10,17 +10,23 @@ There are multiple ways of adding the required files:
 
 2) Install via Bower and include files
 
-    bower install br-filters
+```shell
+bower install br-filters
+```
 
-reference the scripts
+reference the script
 
-- `bower_components/angular-br-filters/dist/br-filters.min.js`
+```html
+<script src="bower_components/angular-br-filters/dist/br-filters.min.js"></script>
+```
 
 ---
 
 Include the br-filters module in your application
 
-    var module = angular.module('myapp', ['br-filters']);
+```js
+var app = angular.module('myapp', ['br-filters']);
+```
 
 ### Basic example
 The most basic use of the directive in html ([plunker](http://plnkr.co/edit/9Pzo9wbGRfp3kbMM1tQH?p=preview))
@@ -28,7 +34,7 @@ The most basic use of the directive in html ([plunker](http://plnkr.co/edit/9Pzo
 CPF before: <span ng-bind="cpf"></span>
 CPF then: <span ng-bind="cpf | cpf"></span>
 ```
-With a related angular controller:
+Or with a related angular controller:
 ```javascript
 angular.module('myapp')
   .controller('ctrl', ['$scope', '$filter', function ($scope, $filter){
