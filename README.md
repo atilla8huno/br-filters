@@ -1,7 +1,7 @@
 ## Angular's Brazilian Filters
 
 [![Bower](https://img.shields.io/bower/v/br-filters.svg)](http://bower.io/search/?q=br-filters)
-[![Build Status](https://travis-ci.org/atilla8huno/br-filters.svg)](https://travis-ci.org/atilla8huno/br-filters)
+[![Build Status](https://travis-ci.org/atilla8huno/angular-br-filters.svg)](https://travis-ci.org/atilla8huno/angular-br-filters)
 
 ### Installing
 
