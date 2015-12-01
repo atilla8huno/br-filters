@@ -35,7 +35,7 @@ The most basic use of the directive in html ([plunker](http://plnkr.co/edit/9Pzo
 CPF before: <span ng-bind="cpf"></span>
 CPF then: <span ng-bind="cpf | cpf"></span>
 ```
-Or with a related angular controller:
+Or with an angular controller:
 ```javascript
 angular.module('myapp')
   .controller('ctrl', ['$scope', '$filter', function ($scope, $filter){
