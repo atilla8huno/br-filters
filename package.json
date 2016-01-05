@@ -6,7 +6,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/atilla8huno/angular-br-filters.git"
+    "url": "https://github.com/atilla8huno/br-filters"
   },
   "keywords": [
     "Angular",
@@ -22,9 +22,9 @@
   "author": "ATILLA BARROS <atilla8huno@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/atilla8huno/angular-br-filters/issues"
+    "url": "https://github.com/atilla8huno/br-filters/issues"
   },
-  "homepage": "https://github.com/atilla8huno/angular-br-filters#readme",
+  "homepage": "https://github.com/atilla8huno/br-filters#readme",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.7.0",
