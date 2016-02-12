@@ -1,4 +1,6 @@
 /**
+ * Filter para CNPJ Brasileiro
+ *
  * Created by ATILLA on 27/11/2015.
  */
 (function () {
@@ -11,11 +13,9 @@
     /** @ngInject */
     function cnpj() {
 
-        var cnpj = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedCNPJ(value);
         };
-
-        return cnpj;
 
         function formattedCNPJ(value) {
             var formatted = value + '';

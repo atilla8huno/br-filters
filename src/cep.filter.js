@@ -1,5 +1,7 @@
 /**
- * Created by ATILLA on 27/11/2015.
+ * Filter para CEP Brasileiro
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function () {
     'use strict';
@@ -11,11 +13,9 @@
     /** @ngInject */
     function cep() {
 
-        var cep = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedCEP(value);
         };
-
-        return cep;
 
         function formattedCEP(value) {
             var formatted = value + '';

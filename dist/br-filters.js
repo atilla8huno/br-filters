@@ -1,5 +1,7 @@
 /**
- * Created by ATILLA on 27/11/2015.
+ * Module for the filters
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function() {
     'use strict';
@@ -8,7 +10,41 @@
 })();
 
 /**
- * Created by ATILLA on 27/11/2015.
+ * Filter para exibir os bytes de um arquivo em formato legível.
+ * Ex.: O valor 7020 será convertido em '6,85 KB'
+ *
+ * Created by ATILLA on 12/02/2016.
+ */
+(function() {
+
+    angular
+        .module('br-filters')
+        .filter('bytes', bytes);
+
+    /** @ngInject */
+    function bytes() {
+
+        return function(bytes, precision) {
+            if (isNaN(parseFloat(bytes)) || !isFinite(bytes)) {
+                return '-';
+            }
+
+            if (typeof precision === 'undefined') {
+                precision = 2;
+            }
+
+            var units = ['bytes', 'KB', 'MB', 'GB', 'TB', 'PB'];
+            var number = Math.floor(Math.log(bytes) / Math.log(1024));
+
+            return (bytes / Math.pow(1024, Math.floor(number))).toFixed(precision) +  ' ' + units[number];
+        };
+    }
+})();
+
+/**
+ * Filter para CEP Brasileiro
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function () {
     'use strict';
@@ -20,11 +56,9 @@
     /** @ngInject */
     function cep() {
 
-        var cep = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedCEP(value);
         };
-
-        return cep;
 
         function formattedCEP(value) {
             var formatted = value + '';
@@ -38,6 +72,8 @@
 })();
 
 /**
+ * Filter para CNPJ Brasileiro
+ *
  * Created by ATILLA on 27/11/2015.
  */
 (function () {
@@ -50,11 +86,9 @@
     /** @ngInject */
     function cnpj() {
 
-        var cnpj = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedCNPJ(value);
         };
-
-        return cnpj;
 
         function formattedCNPJ(value) {
             var formatted = value + '';
@@ -71,7 +105,9 @@
 })();
 
 /**
- * Created by ATILLA on 27/11/2015.
+ * Filter para CPF ou CNPJ Brasileiros
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function () {
     'use strict';
@@ -85,11 +121,9 @@
     /** @ngInject */
     function cpfCnpj($filter) {
 
-        var cpfCnpj = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedCPFCNPJ(value);
         };
-
-        return cpfCnpj;
 
         function formattedCPFCNPJ(value) {
             var formatted = value + '';
@@ -98,7 +132,7 @@
             if (formatted.length <= 11) {
                 formatted = $filter('cpf')(value);
             } else {
-                formatted = $filter('cnpj')(value);;
+                formatted = $filter('cnpj')(value);
             }
 
             return formatted;
@@ -107,7 +141,9 @@
 })();
 
 /**
- * Created by ATILLA on 27/11/2015.
+ * Filter para CPF Brasileiro
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function () {
     'use strict';
@@ -119,11 +155,9 @@
     /** @ngInject */
     function cpf() {
 
-        var cpf = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedCPF(value);
         };
-
-        return cpf;
 
         function formattedCPF(value) {
             var formatted = value + '';
@@ -139,7 +173,9 @@
 })();
 
 /**
- * Created by ATILLA on 27/11/2015.
+ * Filter para Telefones Brasileiros
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function () {
     'use strict';
@@ -151,11 +187,9 @@
     /** @ngInject */
     function telefone() {
 
-        var telefone = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedTelephone(value);
         };
-
-        return telefone;
 
         function formattedTelephone(value) {
             var formatted = value + '';

@@ -1,5 +1,7 @@
 /**
- * Created by ATILLA on 27/11/2015.
+ * Filter para Telefones Brasileiros
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function () {
     'use strict';
@@ -11,11 +13,9 @@
     /** @ngInject */
     function telefone() {
 
-        var telefone = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedTelephone(value);
         };
-
-        return telefone;
 
         function formattedTelephone(value) {
             var formatted = value + '';

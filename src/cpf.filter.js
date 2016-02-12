@@ -1,5 +1,7 @@
 /**
- * Created by ATILLA on 27/11/2015.
+ * Filter para CPF Brasileiro
+ *
+ * Created by ATILLA on 27/11/2015
  */
 (function () {
     'use strict';
@@ -11,11 +13,9 @@
     /** @ngInject */
     function cpf() {
 
-        var cpf = function (value) {
+        return function (value) {
             return angular.isUndefined(value) ? value : formattedCPF(value);
         };
-
-        return cpf;
 
         function formattedCPF(value) {
             var formatted = value + '';
