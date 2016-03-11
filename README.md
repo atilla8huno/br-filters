@@ -1,5 +1,6 @@
 ## Angular's Brazilian Filters
 
+[![MIT License][license-image]][license-url]
 [![Bower](https://img.shields.io/bower/v/br-filters.svg)](http://bower.io/search/?q=br-filters)
 [![Build Status](https://travis-ci.org/atilla8huno/br-filters.svg)](https://travis-ci.org/atilla8huno/br-filters)
 
@@ -45,3 +46,5 @@ angular.module('myapp')
 }]);
 ```
 
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE.md
